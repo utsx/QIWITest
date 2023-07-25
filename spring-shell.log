@@ -1,0 +1,36 @@
+1690278752802:help
+1690278763704:help currency_rates
+1690279038434:currency_rates --code=USD --date=20-20-2022
+1690279178434:currency_rates -code=USD -date=20-20-2022
+1690279243425:currency_rates --code=USD --date=date
+1690279304216:currency_rates --code=usd --date=2
+1690279344890:currency_rates code=usd date=2
+1690279413917:currency_rates --code=usd --date=2
+1690279451933:currency_rates code=usd date=2
+1690279458663:currency_rates --code=usd --date=2
+1690279479530:currency_rates code=usd date=2
+1690279484958:currency_rates -code=usd -date=2
+1690279490084:currency_rates --code=usd --date=2
+1690279548792:currency_rates code=usd date=2
+1690279554034:currency_rates --code=usd --date=2
+1690280410722:currency_rates code=usd date=d1
+1690280453259:currency_rates code=usd date=25/07/2023
+1690280575789:date_req
+1690280598117:currency_rates code=1 date=24/07/2023
+1690280625995:currency_ratescurrency_rates code=USd date=24/07/2023
+1690280633365:currency_rates code=USD date=24/07/2023
+1690280656491:currency_rates code=1 date=24/07/2023
+1690280679579:currency_rates code=USD date=25/07/2023
+1690280689086:currency_rates code=1 date=24/07/2023
+1690280893469:currency_rates code=usd date=24/07/2023
+1690280937103:currency_rates code=usd date=23/07/2023
+1690281032959:currency_rates code=usd date=24/07/2023
+1690281106842:http://www.cbr.ru/scripts/XML_daily.asp?date_req=02/03/2002
+1690281128613:currency_rates code=usd date=02/03/2002
+1690282652253:currency_rates code=usd date=23/07/2021
+1690282685035:stacktrace
+1690283026914:currency_rates code=USD date=23/07/2023
+1690283129817:currency_rates code=USD date=23/04/2023
+1690284175050:currency_rates code=USD date=23/07/2023
+1690284652003:currency_rates code=USD date=23/07/2025
+1690284733482:currency_rates code=USD date=23/07/2023
