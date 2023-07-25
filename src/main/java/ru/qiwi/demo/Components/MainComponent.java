@@ -53,10 +53,6 @@ public class MainComponent {
         JAXBContext context = JAXBContext.newInstance(ValCurs.class);
         Unmarshaller unmarshaller = context.createUnmarshaller();
         ValCurs valCurs = (ValCurs) unmarshaller.unmarshal(reader);
-        System.out.println(valCurs);
-        if(rates.getStatusCode().equals(404) && rates.equals(ResponseEntity.status(500))) {
-            return "Invalid args";
-        }
         if(valCurs.getValuteList() == null){
             return "Current date rate not found. Please give another date";
         }
