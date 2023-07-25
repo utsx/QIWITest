@@ -10,8 +10,7 @@ import javax.xml.bind.JAXBException;
 @org.springframework.shell.standard.ShellComponent
 public class ShellComponent {
 
-    final
-    MainComponent mainComponent;
+    final MainComponent mainComponent;
 
     public ShellComponent(MainComponent mainComponent) {
         this.mainComponent = mainComponent;

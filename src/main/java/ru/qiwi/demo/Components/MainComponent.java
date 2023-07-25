@@ -44,18 +44,19 @@ public class MainComponent {
         try {
             SimpleDateFormat parser = new SimpleDateFormat("dd/MM/yyyy");
             Date date1 = parser.parse(date);
-            date = date1.toString();
         }
         catch (Exception e){
             return "Invalid date. Please give date in format dd/MM/yyyy";
         }
+        ResponseEntity<String> rates = cbrClient.datedCodes(date);
+        StringReader reader = new StringReader(Objects.requireNonNull(rates.getBody()));
         JAXBContext context = JAXBContext.newInstance(ValCurs.class);
         Unmarshaller unmarshaller = context.createUnmarshaller();
-        ResponseEntity<String> rates = cbrClient.datedCodes(date);
+        ValCurs valCurs = (ValCurs) unmarshaller.unmarshal(reader);
+        System.out.println(valCurs);
         if(rates.getStatusCode().equals(404) && rates.equals(ResponseEntity.status(500))) {
             return "Invalid args";
         }
-        ValCurs valCurs = (ValCurs) unmarshaller.unmarshal((XMLStreamReader) new StreamReader(Objects.requireNonNull(rates.getBody())));
         if(valCurs.getValuteList() == null){
             return "Current date rate not found. Please give another date";
         }
@@ -64,7 +65,7 @@ public class MainComponent {
                     return code + " : " + currentValute.getValue();
                 }
         }
-        return "Valute code not found";
+       return "Valute code not found";
     }
 }
 
